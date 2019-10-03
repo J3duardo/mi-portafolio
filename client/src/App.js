@@ -5,6 +5,7 @@ import About from "./pages/About/About";
 import Skills from "./pages/Skills/Skills";
 import Projects from "./pages/Projects/Projects";
 import Gallery from "./pages/Gallery/Gallery";
+import Footer from "./components/Footer/Footer";
 
 //Configuración de redux
 import {Provider} from "react-redux";
@@ -24,6 +25,7 @@ function App() {
         <Skills />
         <Projects />
         <Gallery />
+        <Footer />
       </React.Fragment>
     </Provider>
   );
