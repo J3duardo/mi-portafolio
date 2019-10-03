@@ -1,0 +1,320 @@
+.skills{
+  max-width: 1400px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba($clean, 0.9), rgba($clean, 0.9)), url(/img/skills-background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  padding: $space*2 0 $space*2 0;
+
+  @media screen and(max-width: 550px){
+    padding-bottom: 0;
+  }
+
+  &__info{
+    max-width: 110rem;
+    margin: 0 auto;
+  }
+
+  &__title{
+    max-width: 110rem;
+    margin: 0 auto $space*2 auto;
+    font-size: $heading-2;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $negro;
+    border-bottom: 1px solid $negro;
+    line-height: 1;
+
+    @media screen and(max-width: 1100px){
+      margin-left: $space;
+      margin-right: $space;
+    }
+  }
+
+  &__tabs{
+    display: flex;
+    max-width: 70rem;
+    margin: 0 auto;
+
+    @media screen and(max-width: 550px){
+      display: none;
+    }
+  }
+
+  &__tab{
+    flex-shrink: 0;
+    flex-grow: 0;
+    font-size: $base-size;
+    font-weight: 400;
+    padding: $space/2 $space;
+    background-color: $sunshine;
+    color: $blanco;
+    cursor: pointer;
+    transition: all 350ms;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+    
+    &:not(:last-child){
+      border-right: 1px solid $blanco;
+    }
+
+    &:hover{
+      background-color: $clean;
+      color: $negro;
+    }
+  }
+
+  @keyframes tabBorder{
+    0%{
+      transform: scaleX(0);
+    }
+
+    100%{
+      transform: scaleX(1);
+    }
+  }
+
+  &__active-tab{
+    position: relative;
+    background-color: $clean;
+    color: $negro;
+
+    &:hover{
+      background-color: $clean;
+    }
+    
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      transform-origin: left bottom;
+      background-color: $sunshine;
+
+      animation-name: tabBorder;
+      animation-duration: 350ms;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  &__imgs-container{
+    position: relative;
+    max-width: 70rem;
+    height: 50rem;
+    margin: 0 auto;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+
+    @media screen and(max-width: 550px){
+      height: auto;
+    }
+  }
+   
+  &__skill-title{
+    display: none;
+    position: absolute;
+    padding: $space/3;
+    font-size: $base-size;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    width: 57%;
+    top: 0;
+    right: 0;
+    z-index: 90;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+    color: $negro;
+    // background-color: rgba($clean, 0.6);
+    background-image: linear-gradient(to right, rgba($clean,0.75), rgba($clean,0.2));
+
+    @media screen and(max-width: 550px){
+      display: block;
+    }
+  }
+
+  &__skill-title--2{
+    left: 0;
+    text-align: right;
+    background-image: linear-gradient(to left, rgba($clean,0.75), rgba($clean,0.2));
+  }
+  
+  &__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    img, video, &-slides, &-slider{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &-slider{
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background-color: $sunshine;
+    }
+
+    &-slides{
+      flex-shrink: 0;
+      flex-grow: 1;
+    }
+
+    @media screen and(max-width: 550px){
+      position: relative;
+    }
+
+    &:not(:first-child){
+
+      @media screen and(max-width: 550px){
+        border-top: 3px solid $negro;
+      }
+    }
+  }
+
+  &__active-img{
+    z-index: 80;
+  }
+
+  .arrows-container{
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 90;
+
+    img{
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      padding: 2px;
+      border-radius: 50%;
+      background-color: rgba($vermilion, 0.5);
+      cursor: pointer;
+
+      &:hover{
+        background-color: rgba($vermilion, 1);
+      }
+    }
+  }
+
+  .show-arrows{
+    display: flex;
+  }
+
+  .img-number{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    font-size: $base-size;
+    font-weight: 400;
+    text-shadow: 0 2px 2px rgba(0,0,0,0.75);
+    color: $blanco;
+    z-index: 80;
+  }
+
+  @keyframes despues{
+    0%{
+      opacity: 0;
+    }
+
+    20%{
+      opacity: 0;
+    }
+
+    30%{
+      opacity: 1;
+    }
+
+    70%{
+      opacity: 1;
+    }
+
+    80%{
+      opacity: 0;
+    }
+
+    100%{
+      opacity: 0;
+    }
+  }
+
+  &__img:nth-child(2){
+    background-image: url(/img/before.jpg);
+    background-size: cover;
+    background-position: center center;
+    opacity: 1;
+
+    &::before{
+      content: "Antes...";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      font-size: $heading-4;
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 0 3px 5px rgba(0,0,0,0.8);
+      color: $blanco;
+      background-image: linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.5) 70%,rgba(0,0,0,0) 80%);
+    }
+    
+    p{
+      font-size: $heading-4;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-shadow: 0 3px 5px rgba(0,0,0,0.8);
+      color: $blanco;
+      background-image: linear-gradient(to right, rgba(0,0,0,0) 10%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.5) 70%,rgba(0,0,0,0) 90%);
+    }
+    
+    img, p{
+      opacity: 0;
+
+      animation-name: despues;
+      animation-duration: 6000ms;
+      animation-iteration-count: infinite;
+      animation-iteration-count: linear;
+    }
+  }
+
+  &__text{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p{
+      font-size: $heading-4;
+      text-align: center;
+    }
+  }
+
+  #slider {
+    .skills__img-slides {
+      display: none
+    }
+    
+    .show {
+      display: block
+    }
+  }
+}
+

@@ -1,0 +1,56 @@
+[
+  {
+    "className": "skills__img-slides skills__img-slide-0",
+    "src": "/img/slider/slide-0.jpg",
+    "alt": "slide 0",
+    "active": 1
+  },
+  {
+    "className": "skills__img-slides skills__img-slide-1",
+    "src": "/img/slider/slide-1.jpg",
+    "alt": "slide 1",
+    "active": 2
+  },
+  {
+    "className": "skills__img-slides skills__img-slide-2",
+    "src": "/img/slider/slide-2.jpg",
+    "alt": "slide 2",
+    "active": 3
+  },
+  {
+    "className": "skills__img-slides skills__img-slide-3",
+    "src": "/img/slider/slide-3.jpg",
+    "alt": "slide 3",
+    "active": 4
+  },
+  {
+    "className": "skills__img-slides skills__img-slide-4",
+    "src": "/img/slider/slide-4.jpg",
+    "alt": "slide 4",
+    "active": 5
+  },
+  {
+    "className": "skills__img-slides skills__img-slide-5",
+    "src": "/img/slider/slide-5.jpg",
+    "alt": "slide 5",
+    "active": 6
+  },
+  {
+    "className": "skills__img-slides skills__img-slide-6",
+    "src": "/img/slider/slide-6.jpg",
+    "alt": "slide 6",
+    "active": 7
+  },
+  {
+    "className": "skills__img-slides skills__img-slide-7",
+    "src": "/img/slider/slide-7.jpg",
+    "alt": "slide 7",
+    "active": 8
+  },
+  {
+    "className": "skills__img-slides skills__img-slide-8",
+    "src": "/img/slider/slide-8.jpg",
+    "alt": "slide 8",
+    "active": 9
+  }
+]

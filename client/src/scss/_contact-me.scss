@@ -1,0 +1,287 @@
+.contact{
+  max-width: 1400px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: $space*2 0 0 0;
+  background-image: linear-gradient(to right, $clean 50%, $fresh 50%);
+
+  &__title-container{
+    max-width: 110rem;
+    margin: 0 auto $space*2 auto;
+    border-bottom: 1px solid $negro;
+
+    @media screen and(max-width: 1100px){
+      margin-left: $space;
+      margin-right: $space;
+    }
+  }
+
+  &__title{
+    font-size: $heading-2;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $negro;
+  }
+
+  &__content{
+    padding-top: $space;
+    background-image: linear-gradient(rgba($vermilion,0.85), rgba($vermilion,0.85)), url(https://res.cloudinary.com/dzytlqnoi/image/upload/v1564572030/portafolio-paisajes/paisaje-6-medium_zd166a.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  &__info-container{
+    max-width: 110rem;
+    margin: 0 auto $space*2 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and(max-width: 1100px){
+      padding-left: $space;
+      padding-right: $space;
+    }
+
+    @media screen and(max-width: 450px){
+      flex-direction: column;
+    }
+  }
+  
+  &__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: $space/2;
+
+    img{
+      display: block;
+      width: 4rem;
+      height: 4rem;
+      flex-grow: 0;
+      flex-shrink: 0;
+      margin-right: 8px;
+    }
+    
+    p.icon-text{
+      font-size: $base-size;
+      text-align: center;
+      flex-grow: 0;
+      flex-shrink: 0;
+      color: $blanco;
+    }
+  }
+  
+  &__info{
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    &:not(:last-child){
+      @media screen and(max-width: 450px){
+        margin-bottom: $space;
+      }
+    }
+
+    p.text{
+      font-size: $small-size;
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
+      color: $blanco;
+    }
+  }
+}
+
+.form{
+  max-width: 70rem;
+  margin: 0 auto;
+
+  @media screen and(max-width: 1100px){
+    padding-left: $space;
+    padding-right: $space;
+  }
+
+  &__inputs-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: $space;
+  }
+
+  &__name, &__email{
+    display: block;
+    font-family: inherit;
+    font-size: $base-size;
+    padding: $space/2 $space;
+    width: 40%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    color: inherit;
+    background-color: rgba($blanco, 0.7);
+    border: 1px solid $blanco;
+    outline: none;
+    
+    &:focus{
+      outline: 1px solid $fresh;
+      outline-offset: 3px;
+    }
+    
+    &:invalid{
+      border-bottom: 3px solid $rojizo;
+    }
+
+    &:valid{
+      border-bottom: 3px solid rgb(2, 255, 2);
+    }
+
+    @media screen and(max-width: 450px){
+      width: 48%;
+    }
+  }
+
+  &__textarea{
+    display: block;
+    width: 100%;
+    padding: $space/2 $space;
+    font-family: inherit;
+    font-size: $base-size;
+    margin-bottom: $space;
+    color: inherit;
+    background-color: rgba($blanco, 0.7);
+    border: 1px solid $blanco;
+    outline: none;
+
+    &:focus{
+      outline: 1px solid $fresh;
+      outline-offset: 3px;
+    }
+
+    &:invalid{
+      border-bottom: 3px solid $rojizo;
+    }
+
+    &:valid{
+      border-bottom: 3px solid rgb(2, 255, 2);
+    }
+  }
+
+  &__btn{
+    display: block;
+    margin-bottom: $space;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: $small-size;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: $space/2 $space;
+    background-color: $clean;
+    border: 1px solid $vermilion;
+    color: $negro;
+    cursor: pointer;
+    transition: background-color 350ms, color 350ms;
+
+    &:hover{
+      background-color: $blanco;
+      color: $negro;
+    }
+
+    &:focus{
+      outline: 1px solid $fresh;
+      outline-offset: 3px;
+    }
+  }
+}
+
+.footer{
+  background-image: linear-gradient(rgba(0,0,0,0) 15%, rgba(0,0,0,1));
+  padding: $space 0;
+
+  &__info-container{
+    max-width: 110rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and(max-width: 1100px){
+      padding-left: $space;
+      padding-right: $space;
+    }
+  
+    @media screen and(max-width: 550px){
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__text{
+    font-size: $small-size;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $clean;
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    @media screen and(max-width: 550px){
+      text-align: center;
+      order: 10;
+    }
+  }
+
+  .fb-share-button{
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    @media screen and(max-width: 550px){
+      order: 5;
+      margin-bottom: $space*2;
+    }
+  }
+
+  &__icons-container{
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    @media screen and(max-width: 550px){
+      margin-bottom: $space*2;
+    }
+  }
+
+  &__list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item:not(:last-child){
+    margin-right: $space;
+  }
+
+  &__item{
+    p{
+      font-size: $small-size;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: $blanco;
+    }
+  }
+
+  &__link{
+    text-decoration: none;
+  }
+
+  &__icon{
+    width: 3rem;
+    height: 3rem;
+    display: block;
+  }
+}

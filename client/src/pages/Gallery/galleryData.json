@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Atardecer en la Bahía de Juan Griego",
+    "src": "https://res.cloudinary.com/dzytlqnoi/image/upload/v1569960230/random/random-1_zdtgdx.jpg",
+    "alt": "mirando el atardecer",
+    "aperture": "13",
+    "speed": "1/80",
+    "iso": "100"
+  },
+  {
+    "id": 2,
+    "title": "La naturaleza demostrando su poder",
+    "src": "https://res.cloudinary.com/dzytlqnoi/image/upload/v1569960236/random/random-2_pr0anx.jpg",
+    "alt": "tormenta eléctrica",
+    "aperture": "3.5",
+    "speed": "30s",
+    "iso": "100"
+  },
+  {
+    "id": 3,
+    "title": "Light painting con lana de acero",
+    "src": "https://res.cloudinary.com/dzytlqnoi/image/upload/v1569960233/random/random-3_mtnhkw.jpg",
+    "alt": "light painting",
+    "aperture": "32",
+    "speed": "15s",
+    "iso": "100"
+  },
+  {
+    "id": 4,
+    "title": "La Luna y a la izquierda Júpiter",
+    "src": "https://res.cloudinary.com/dzytlqnoi/image/upload/v1569960232/random/random-4_wri63y.jpg",
+    "alt": "la luna y júpiter",
+    "aperture": "3.4",
+    "speed": "1/160",
+    "iso": "100"
+  },
+  {
+    "id": 5,
+    "title": "Lagartija del género Cnemidophorus lemniscatus",
+    "src": "https://res.cloudinary.com/dzytlqnoi/image/upload/v1569960233/random/random-5_egf8vv.jpg",
+    "alt": "lagartija",
+    "aperture": "6.4",
+    "speed": "1/200",
+    "iso": "200"
+  },
+  {
+    "id": 6,
+    "title": "Retrato a la luz del atardecer en Juan Griego",
+    "src": "https://res.cloudinary.com/dzytlqnoi/image/upload/v1569960230/random/random-6_jcu6wx.jpg",
+    "alt": "sunset portrait",
+    "aperture": "18",
+    "speed": "6s",
+    "iso": "100"
+  }
+]
