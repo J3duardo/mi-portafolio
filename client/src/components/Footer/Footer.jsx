@@ -9,8 +9,12 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__info-container">
         <p className="footer__text">Desarrollado por Jesús Guzmán &copy; {new Date().getFullYear()} Todos los derechos reservados</p>
-        <div className="fb-share-button" data-href="https://jguzman-portafolio.firebaseio.com" data-layout="button" data-size="large" data-mobile-iframe="true">
-          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjguzman-portafolio.firebaseio.com%2F&amp;src=sdkpreparse" className="fb-xfbml-parse-ignore" rel="noopener noreferrer">Compartir</a>
+        <div
+          class="fb-share-button"
+          data-href="https://natours-traveling.herokuapp.com/"
+          data-layout="button_count"
+          data-size="large"
+        >
         </div>
         <nav className="footer__icons-container">
           <ul className="footer__list">
