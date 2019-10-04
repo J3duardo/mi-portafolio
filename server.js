@@ -9,9 +9,14 @@ dotenv.config({path: "./config.env"})
 const app = express();
 const port = process.env.PORT || 5000;
 
+//Establecer el view engine y las rutas a los views
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 app.use(cors());
+
 
 app.post("/", async (req, res) => {
   try {
