@@ -1,0 +1,40 @@
+.alert-modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 10000;
+
+  &__content {
+    width: 450px;
+    padding: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+
+    h2 {
+      margin-bottom: 2rem;
+      font-size: 2.2624rem;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #52658f;
+    cursor: pointer;
+  }
+}
