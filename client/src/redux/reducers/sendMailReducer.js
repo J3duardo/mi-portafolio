@@ -1,4 +1,4 @@
-import {SEND_MAIL_START, SEND_MAIL_SUCCESS, SEND_MAIL_ERROR} from "../actions/types";
+import {SEND_MAIL_START, SEND_MAIL_SUCCESS, SEND_MAIL_ERROR, CLEAR_MAIL_REDUCER} from "../actions/types";
 
 const initialState = {
   mailData: {},
@@ -27,6 +27,10 @@ export default (state = initialState, action) => {
         error: action.payload,
         sending: false,
         failed: true
+      }
+    case CLEAR_MAIL_REDUCER:
+      return {
+        ...initialState
       }
     default:
       return state
