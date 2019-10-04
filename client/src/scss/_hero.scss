@@ -55,13 +55,13 @@
   transform: translateX(-50%);
   width: 1400px;
   z-index: 100;
+  font-size: $base-size;
 
   &__list{
     list-style: none;
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    font-size: $base-size;
     font-weight: 300;
     transition: all 350ms;
   }
@@ -106,7 +106,6 @@
 }
 
 .main-nav-small{
-  // background-color: rgba(darken($grey-blue, 30%), 0.9);
   background-color: rgba($vermilion, 0.85);
   font-size: $small-size;
   transition: all 350ms;

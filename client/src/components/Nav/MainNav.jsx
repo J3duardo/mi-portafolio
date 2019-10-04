@@ -3,10 +3,16 @@ import hamburgerMenuIcon from "../../icons/hamburger-menu.svg"
 
 const MainNav = () => {
   const [showMobileNav, mobileNavToggle] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const toggleNavMenu = () => {
     mobileNavToggle(!showMobileNav);
   }
+
+  window.addEventListener("scroll", () => {
+    const scrollY = window.pageYOffset;
+    setScrollPosition(scrollY);
+  });
 
   const navItems = [
     {
@@ -60,7 +66,7 @@ const MainNav = () => {
       </div>
 
       {/* Menú para tamaño normal */}
-      <nav className="main-nav main-nav-small">
+      <nav className={`main-nav ${scrollPosition >= 250 && "main-nav-small"}`}>
         <ul className="main-nav__list">
           {renderNavItems()}
         </ul>
