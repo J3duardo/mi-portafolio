@@ -28,7 +28,7 @@ const MainNav = () => {
       content: "Proyectos Recientes"
     },
     {
-      href: "#galery",
+      href: "#gallery",
       content: "Galería"
     },
     {
@@ -47,6 +47,19 @@ const MainNav = () => {
     })
   }
 
+  const renderMobileNavItems = () => {
+    return navItems.map(item => {
+      return (
+        <li key={item.href}
+          onClick={() => mobileNavToggle(false)}
+          className="mobile-nav__item"
+        >
+          <a href={item.href} className="mobile-nav__link">{item.content}</a>
+        </li>
+      )
+    })
+  }
+
   return (
     <React.Fragment>
       {/* Menú para tamaño móvil */}
@@ -56,11 +69,7 @@ const MainNav = () => {
       <div className={`mobile-nav-container ${showMobileNav ? "mobile-nav-container-reveal" : ""}`}>
         <nav className="mobile-nav">
           <ul className="mobile-nav__list">
-            <li className="mobile-nav__item"><a href="#about" className="mobile-nav__link">Acerca de mí</a></li>
-            <li className="mobile-nav__item"><a href="#skills" className="mobile-nav__link">Habilidades</a></li>
-            <li className="mobile-nav__item"><a href="#recent-projects" className="mobile-nav__link">Proyectos Recientes</a></li>
-            <li className="mobile-nav__item"><a href="#gallery" className="mobile-nav__link">Galería</a></li>
-            <li className="mobile-nav__item"><a href="#contact" className="mobile-nav__link">Contáctame</a></li>
+            {renderMobileNavItems()}
           </ul>
         </nav>
       </div>
