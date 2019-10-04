@@ -31,7 +31,7 @@ const Projects = (props) => {
       </article>
 
       {props.selectedImage && 
-        <div className="img-full-width-container" style={{display: "flex"}}>
+        <div className="img-full-width-container" style={{display: "flex", flexDirection: "column"}}>
           <div className="img-full-width">
             <picture className="imagenPantallaCompleta">
               <source

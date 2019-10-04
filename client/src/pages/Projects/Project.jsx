@@ -23,15 +23,16 @@ const Project = (props) => {
               {!toggleGallery ? "Ver más" : "Ver menos"}
           </button>
           </div>
-
-          <div className="project__location">
-            <div className="project__location-city">
-              <img src={locationIcon} alt="Location icon" />
-              <h4>{location.city}</h4>
+          {location && 
+            <div className="project__location">
+              <div className="project__location-city">
+                <img src={locationIcon} alt="Location icon" />
+                <h4>{location.city}</h4>
+              </div>
+              <p className="project__location-state">{location.state}</p>
+              <p className="project__location-country">{location.country}</p>
             </div>
-            <p className="project__location-state">{location.state}</p>
-            <p className="project__location-country">{location.country}</p>
-          </div>
+          }
         </div>
       </div>
 
