@@ -2,7 +2,6 @@ import React from "react";
 import githubLogo from "../../icons/github-logo.svg";
 import facebookLogo from "../../icons/facebook-logo.svg";
 import behanceLogo from "../../icons/behance.svg";
-import instagramLogo from "../../icons/instagram.svg";
 
 const Footer = () => {
   return (
@@ -10,7 +9,7 @@ const Footer = () => {
       <div className="footer__info-container">
         <p className="footer__text">Desarrollado por Jesús Guzmán &copy; {new Date().getFullYear()} Todos los derechos reservados</p>
         <div
-          class="fb-share-button"
+          className="fb-share-button"
           data-href="https://jegq-portafolio.herokuapp.com/"
           data-layout="button_count"
           data-size="large"

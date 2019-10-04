@@ -2,7 +2,7 @@
   max-width: 1400px;
   min-width: 320px;
   margin: 0 auto;
-  padding: $space*2 0 0 0;
+  padding: $space*2 0;
   background-image: linear-gradient(to right, $clean 50%, $fresh 50%);
 
   &__title-container{
@@ -25,6 +25,7 @@
 
   &__content{
     padding-top: $space;
+    padding-bottom: $space;
     background-image: linear-gradient(rgba($vermilion,0.85), rgba($vermilion,0.85)), url(https://res.cloudinary.com/dzytlqnoi/image/upload/v1564572030/portafolio-paisajes/paisaje-6-medium_zd166a.jpg);
     background-position: center center;
     background-size: cover;
