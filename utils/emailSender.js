@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
+const pug = require("pug");
 
 const sendMail = async (formData) => {
-  
   const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
@@ -12,11 +12,18 @@ const sendMail = async (formData) => {
     }
   });
 
+  //Renderizar el HTML del email desde un template pug
+  const html = pug.renderFile(`${__dirname}/../views/email/mensaje.pug`, {
+    nombre: formData.nombre,
+    email: formData.email,
+    mensaje: formData.mensaje
+  });
+
   const mailOptions = {
-    from: "Mi Portafolio",
+    from: process.env.EMAIL_USERNAME,
     to: process.env.EMAIL_TO,
     subject: "Mensaje del portafolio",
-    text: JSON.stringify(formData)
+    html: html
   }
 
   await transporter.sendMail(mailOptions)
