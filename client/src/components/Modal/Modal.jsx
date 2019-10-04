@@ -15,14 +15,21 @@ const Modal = (props) => {
     }
   }, [props.sending, props.success, props.failed]);
 
+  if (props.success) {
+    window.setTimeout(() => {
+      setShowModal(false);
+      props.clearState()
+    }, 2500)
+  }
+
   return (
     <React.Fragment>
       {showModal &&
         <div className="alert-modal">
           <div className="alert-modal__content">
-            {props.sending && <h2>Sending</h2>}
-            {props.success && <h2>Successfully sent!</h2>}
-            {props.failed && <h2>Error sending.</h2>}
+            {props.sending && <h2>Enviando mensaje...</h2>}
+            {props.success && <h2>Enviado con éxito!</h2>}
+            {props.failed && <h2>Error al enviar</h2>}
             <button
               className="alert-modal__btn"
               onClick={() => {
