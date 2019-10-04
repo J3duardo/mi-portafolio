@@ -1,7 +1,10 @@
 .footer{
   // background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,45));
-  background-color: $vermilion;
+  max-width: 1400px;
+  min-width: 320px;
+  margin: 0 auto;
   padding: $space 0;
+  background-color: $vermilion;
 
   &__info-container{
     max-width: 110rem;

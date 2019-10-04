@@ -22,10 +22,10 @@ const Hero = () => {
 
       <div className="hero-overlay"></div>
 
-      <div className="hero-arrow arrow-reveal">
+      <a href="#about" id="hero-arrow" className="main-nav__link hero-arrow arrow-reveal">
         <p>Continuar</p>
         <img src={DownArrow} alt="down arrow icon"/>
-      </div>
+      </a>
     </header>
   );
 }
