@@ -37,7 +37,13 @@ const Project = (props) => {
       </div>
 
       {/* Galería del proyecto */}
-      <Gallery gallery={galleryImgs} projectName={name} toggleGallery={toggleGallery}/>
+      {toggleGallery && 
+        <Gallery
+          gallery={galleryImgs}
+          projectName={name}
+          toggleGallery={toggleGallery}
+        />
+      }
     </div>
   );
 }
