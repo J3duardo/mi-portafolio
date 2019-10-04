@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import locationIcon from "../../icons/location.svg";
 import letterIcon from "../../icons/letter.svg";
 import phoneIcon from "../../icons/phone.svg";
+import {sendMailAsync} from "../../redux/actions";
 
 const Contact = (props) => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,16 @@ const Contact = (props) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
+    })
+  }
+
+  const onSubmitHandler = (e) => {
+    e.preventDefault();
+    props.sendMail(formData);
+    setFormData({
+      nombre: "",
+      email: "",
+      mensaje: ""
     })
   }
 
@@ -48,7 +59,7 @@ const Contact = (props) => {
             <p className="text">(+58) 295&ndash;253&ndash;7348</p>
           </div>
         </div>
-        <form className="form">
+        <form className="form" onSubmit={onSubmitHandler}>
           <div className="form__inputs-container">
             <input
               type="text"
@@ -88,4 +99,12 @@ const Contact = (props) => {
   );
 }
 
-export default Contact;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    sendMail: (formData) => {
+      dispatch(sendMailAsync(formData))
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Contact);
