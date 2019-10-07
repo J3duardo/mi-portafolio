@@ -12,7 +12,6 @@ const Gallery = (props) => {
 
   return (
     <div
-      style={{padding: "1rem 0", backgroundColor: "#fff"}}
       className={`project__gallery project__gallery--${galleryNum} ${props.toggleGallery && "project__gallery--show"}`}
     >
       {renderImages()}
