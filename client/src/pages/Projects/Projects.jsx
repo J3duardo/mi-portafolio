@@ -31,12 +31,14 @@ const Projects = (props) => {
       </article>
 
       {props.selectedImage && 
-        <div className="img-full-width-container" style={{display: "flex", flexDirection: "column"}}>
+        <div className="img-full-width-container">
+          <Spinner show={isLoading} />
           <div className="img-full-width">
             <picture className="imagenPantallaCompleta">
               <source
                 onLoad={(e) => {
                     e.target.parentElement.style.opacity = 1;
+                    e.target.parentElement.parentElement.style.opacity = 1;
                     isLoadingHandler(false)
                   }
                 }                
@@ -48,6 +50,7 @@ const Projects = (props) => {
               <source
                 onLoad={(e) => {
                     e.target.parentElement.style.opacity = 1;
+                    e.target.parentElement.parentElement.style.opacity = 1;
                     isLoadingHandler(false)
                   }
                 }
@@ -59,6 +62,7 @@ const Projects = (props) => {
               <img
                 onLoad={(e) => {
                     e.target.parentElement.style.opacity = 1;
+                    e.target.parentElement.parentElement.style.opacity = 1;
                     isLoadingHandler(false)
                   }
                 }
@@ -67,7 +71,6 @@ const Projects = (props) => {
                 alt="full screen"
               />
             </picture>
-            <Spinner show={isLoading} />
             <img
               onClick={() => {
                   props.closeImage();
@@ -75,7 +78,7 @@ const Projects = (props) => {
                 }
               }
               src={iconClose} alt="close icon"
-              title="Close image"
+              title="Cerrar imagen"
               className="img-close"
               style={{opacity: `${isLoading ? "0" : "1"}`, zIndex: "30"}}
             />
