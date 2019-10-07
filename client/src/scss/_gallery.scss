@@ -76,6 +76,7 @@
 
   &__img{
     position: relative;
+    min-height: 150px;
     overflow: hidden;
     background-color: $negro;
     box-shadow: 0 3px 6px rgba($vermilion,0.5);
