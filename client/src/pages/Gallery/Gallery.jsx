@@ -1,8 +1,11 @@
 import React from "react";
 import galleryData from "./galleryData.json";
 import GalleryItem from "./GalleryItem.jsx";
+import {connect} from "react-redux";
+import {scrollToSection} from "../../redux/actions";
+import {sectionScroller} from "../../utils/scroller";
 
-const Gallery = () => {
+const Gallery = (props) => {
   const galleryItems = galleryData;
 
   const renderGalleryItems = () => {
@@ -10,6 +13,11 @@ const Gallery = () => {
       return <GalleryItem key={item.id} data={item} />
     })
   }
+
+  //Hacer scroll a la sección Gallery
+  if(props.selectedSection === "#gallery") {
+    sectionScroller("#gallery", props.setSelectedSection)
+  } 
 
   return (
     <section className="gallery" id="gallery">
@@ -22,4 +30,18 @@ const Gallery = () => {
   );
 }
 
-export default Gallery;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSelectedSection: (sectionId) => {
+      dispatch(scrollToSection(sectionId))
+    }
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    selectedSection: state.selectedSection.selectedSection
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Gallery);

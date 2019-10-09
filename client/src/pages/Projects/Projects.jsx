@@ -5,6 +5,8 @@ import iconClose from "../../icons/close.svg"
 import {connect} from "react-redux";
 import {clearSelectedImg} from "../../redux/actions";
 import Spinner from "../../components/Spinner/Spinner.jsx";
+import {scrollToSection} from "../../redux/actions";
+import {sectionScroller} from "../../utils/scroller";
 
 const Projects = (props) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,6 +24,11 @@ const Projects = (props) => {
       )
     })
   }
+
+  //Hacer scroll a la sección recent-projects
+  if(props.selectedSection === "#recent-projects") {
+    sectionScroller("#recent-projects", props.setSelectedSection)
+  } 
 
   return (
     <section className="recent-projects" id="recent-projects">
@@ -91,7 +98,8 @@ const Projects = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    selectedImage: state.selectedImage.selectedImage
+    selectedImage: state.selectedImage.selectedImage,
+    selectedSection: state.selectedSection.selectedSection
   }
 }
 
@@ -99,6 +107,9 @@ const mapDispatchToProps = (dispatch) => {
   return {
     closeImage: () => {
       dispatch(clearSelectedImg())
+    },
+    setSelectedSection: (sectionId) => {
+      dispatch(scrollToSection(sectionId))
     }
   }
 }

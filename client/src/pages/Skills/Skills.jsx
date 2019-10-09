@@ -2,8 +2,11 @@ import React, {useState} from "react";
 import iconLeftArrow from "../../icons/left-arrow.svg";
 import iconRightArrow from "../../icons/right-arrow.svg";
 import slidesData from "./slidesData.json";
+import {connect} from "react-redux";
+import {scrollToSection} from "../../redux/actions";
+import {sectionScroller} from "../../utils/scroller";
 
-const Skills = () => {
+const Skills = (props) => {
   const [activeContent, setActiveContent] = useState("1");
   const [activeImg, setActiveImg] = useState(1);
   
@@ -43,6 +46,11 @@ const Skills = () => {
       }
     }
   }
+
+  //Hacer scroll a la sección Skills
+  if(props.selectedSection === "#skills") {
+    sectionScroller("#skills", props.setSelectedSection)
+  } 
 
   return (
     <section className="skills" id="skills">
@@ -130,4 +138,18 @@ const Skills = () => {
   );
 }
 
-export default Skills;
+const mapStateToProps = (state) => {
+  return {
+    selectedSection: state.selectedSection.selectedSection
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSelectedSection: (sectionId) => {
+      dispatch(scrollToSection(sectionId))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Skills);

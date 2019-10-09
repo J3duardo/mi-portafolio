@@ -1,6 +1,15 @@
 import React from "react";
+import {connect} from "react-redux";
+import {scrollToSection} from "../../redux/actions";
+import {sectionScroller} from "../../utils/scroller";
 
-const About = () => {
+const About = (props) => {
+
+  //Hacer scroll a la sección About
+  if(props.selectedSection === "#about") {
+    sectionScroller("#about", props.setSelectedSection)
+  }
+
   return (
     <section className="about" id="about">
     <article className="about__info">
@@ -20,4 +29,18 @@ const About = () => {
   );
 }
 
-export default About;
+const mapStateToProps = (state) => {
+  return {
+    selectedSection: state.selectedSection.selectedSection
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSelectedSection: (sectionId) => {
+      dispatch(scrollToSection(sectionId))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(About);

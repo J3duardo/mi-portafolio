@@ -1,7 +1,9 @@
 import React, {useState} from "react";
-import hamburgerMenuIcon from "../../icons/hamburger-menu.svg"
+import hamburgerMenuIcon from "../../icons/hamburger-menu.svg";
+import {connect} from "react-redux";
+import {scrollToSection} from "../../redux/actions";
 
-const MainNav = () => {
+const MainNav = (props) => {
   const [showMobileNav, mobileNavToggle] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -12,7 +14,7 @@ const MainNav = () => {
   window.addEventListener("scroll", () => {
     const scrollY = window.pageYOffset;
     setScrollPosition(scrollY);
-  });
+  }); 
 
   const navItems = [
     {
@@ -40,8 +42,12 @@ const MainNav = () => {
   const renderNavItems = () => {
     return navItems.map((item) => {
       return (
-        <li key={item.href} className="main-nav__item main-nav-reveal">
-          <a href={item.href} className="main-nav__link">{item.content}</a>
+        <li 
+          key={item.href}
+          className="main-nav__item main-nav-reveal"
+          onClick={() => props.setSelectedSection(item.href)}
+        >
+          <span className="main-nav__link" style={{cursor: "pointer"}}>{item.content}</span>
         </li>
       )
     })
@@ -51,10 +57,13 @@ const MainNav = () => {
     return navItems.map(item => {
       return (
         <li key={item.href}
-          onClick={() => mobileNavToggle(false)}
+          onClick={() => {
+            mobileNavToggle(false);
+            props.setSelectedSection(item.href)
+          }}
           className="mobile-nav__item"
         >
-          <a href={item.href} className="mobile-nav__link">{item.content}</a>
+          <span className="mobile-nav__link" style={{cursor: "pointer"}}>{item.content}</span>
         </li>
       )
     })
@@ -84,4 +93,12 @@ const MainNav = () => {
   );
 }
 
-export default MainNav;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSelectedSection: (sectionId) => {
+      dispatch(scrollToSection(sectionId))
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(MainNav);

@@ -1,8 +1,16 @@
 import React from 'react';
 import MainNav from "../../components/Nav/MainNav";
-import DownArrow from "../../icons/down-arrow.svg"
+import DownArrow from "../../icons/down-arrow.svg";
+import {connect} from "react-redux";
+import {scrollToSection} from "../../redux/actions";
+import {sectionScroller} from "../../utils/scroller";
 
-const Hero = () => {
+const Hero = (props) => {
+  //Hacer scroll a la sección About
+  if(props.selectedSection === "#about") {
+    sectionScroller("#about", props.setSelectedSection) 
+  }
+
   return (
     <header className="hero-section">
       <MainNav />
@@ -22,12 +30,30 @@ const Hero = () => {
 
       <div className="hero-overlay"></div>
 
-      <a href="#about" id="hero-arrow" className="main-nav__link hero-arrow arrow-reveal">
+      <div
+        id="hero-arrow"
+        className="main-nav__link hero-arrow arrow-reveal"
+        onClick={() => props.setSelectedSection("#about")}
+      >
         <p>Continuar</p>
         <img src={DownArrow} alt="down arrow icon"/>
-      </a>
+      </div>
     </header>
   );
 }
 
-export default Hero;
+const mapStateToProps = (state) => {
+  return {
+    selectedSection: state.selectedSection.selectedSection
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setSelectedSection: (sectionId) => {
+      dispatch(scrollToSection(sectionId))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Hero);

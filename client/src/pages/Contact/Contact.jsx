@@ -5,6 +5,8 @@ import letterIcon from "../../icons/letter.svg";
 import phoneIcon from "../../icons/phone.svg";
 import {sendMailAsync} from "../../redux/actions";
 import Modal from "../../components/Modal/Modal";
+import {scrollToSection} from "../../redux/actions";
+import {sectionScroller} from "../../utils/scroller";
 
 const Contact = (props) => {
   const [formData, setFormData] = useState({
@@ -29,6 +31,11 @@ const Contact = (props) => {
       mensaje: ""
     })
   }
+
+  //Hacer scroll a la sección Contact
+  if(props.selectedSection === "#contact") {
+    sectionScroller("#contact", props.setSelectedSection)
+  }    
 
   return (
     <React.Fragment>
@@ -107,8 +114,17 @@ const mapDispatchToProps = (dispatch) => {
   return {
     sendMail: (formData) => {
       dispatch(sendMailAsync(formData))
+    },
+    setSelectedSection: (sectionId) => {
+      dispatch(scrollToSection(sectionId))
     }
   }
 }
 
-export default connect(null, mapDispatchToProps)(Contact);
+const mapStateToProps = (state) => {
+  return {
+    selectedSection: state.selectedSection.selectedSection
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Contact);
