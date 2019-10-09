@@ -5,7 +5,7 @@ const Spinner = (props) => {
   return (
     <React.Fragment>
       {props.show && 
-        <div className="la-ball-clip-rotate la-2x">
+        <div className="la-ball-clip-rotate la-2x" style={{color: props.color || "#fff"}}>
           <div></div>
         </div>     
       }
