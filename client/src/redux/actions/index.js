@@ -1,4 +1,4 @@
-import { SELECTED_IMAGE, CLEAR_SELECTED_IMAGE, SEND_MAIL_START, SEND_MAIL_ERROR, SEND_MAIL_SUCCESS } from "./types";
+import { SELECTED_IMAGE, CLEAR_SELECTED_IMAGE, SEND_MAIL_START, SEND_MAIL_ERROR, SEND_MAIL_SUCCESS, SELECTED_SECTION } from "./types";
 import axios from "axios";
 
 export const selectImg = (data) => {
@@ -38,5 +38,13 @@ export const sendMailAsync = (data) => {
         payload: error
       })
     }
+  }
+}
+
+//Hacer scroll a la sección seleccionada
+export const scrollToSection = (sectionId) => {
+  return {
+    type: SELECTED_SECTION,
+    payload: sectionId
   }
 }
