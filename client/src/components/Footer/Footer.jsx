@@ -7,7 +7,10 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__info-container">
-        <p className="footer__text">Desarrollado por Jesús Guzmán &copy; {new Date().getFullYear()} Todos los derechos reservados</p>
+        <p className="footer__text">
+          Desarrollado por Jesús Guzmán
+          <br/> &copy; {new Date().getFullYear()} Todos los derechos reservados
+        </p>
         <div
           className="fb-share-button"
           data-href="https://jegq-portafolio.herokuapp.com/"

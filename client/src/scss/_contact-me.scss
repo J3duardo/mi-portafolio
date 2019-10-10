@@ -45,7 +45,7 @@
       padding-right: $space;
     }
 
-    @media screen and(max-width: 450px){
+    @media screen and(max-width: 600px){
       flex-direction: column;
     }
   }
@@ -79,7 +79,7 @@
     flex-grow: 0;
 
     &:not(:last-child){
-      @media screen and(max-width: 450px){
+      @media screen and(max-width: 600px){
         margin-bottom: $space;
       }
     }

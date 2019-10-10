@@ -27,7 +27,11 @@ const MainNav = (props) => {
     },
     {
       href: "#recent-projects",
-      content: "Proyectos Recientes"
+      content: "Fotografía"
+    },
+    {
+      href: "#web-development",
+      content: "Desarrollo Web"
     },
     {
       href: "#gallery",

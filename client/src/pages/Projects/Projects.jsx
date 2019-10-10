@@ -32,7 +32,7 @@ const Projects = (props) => {
 
   return (
     <section className="recent-projects" id="recent-projects">
-      <h2 className="recent-projects__title">Proyectos Recientes</h2>
+      <h2 className="recent-projects__title">Proyectos Fotográficos</h2>
       <article className="projects-container">
         {renderProjects()}
       </article>
