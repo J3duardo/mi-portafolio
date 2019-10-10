@@ -104,7 +104,7 @@
   &__imgs-container{
     position: relative;
     max-width: 70rem;
-    height: 50rem;
+    height: 52rem;
     margin: 0 auto;
     box-shadow: 0 3px 6px rgba(0,0,0,0.5);
 
@@ -142,6 +142,7 @@
   }
   
   &__img{
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -171,6 +172,7 @@
 
     @media screen and(max-width: 550px){
       position: relative;
+      display: block;
     }
 
     &:not(:first-child){
@@ -182,6 +184,7 @@
   }
 
   &__active-img{
+    display: block;
     z-index: 80;
   }
 
@@ -314,6 +317,62 @@
     
     .show {
       display: block
+    }
+  }
+
+  &__img-web-icons-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background-color: $vermilion;
+  }
+  
+  &__img-web-icon {
+    padding: 1rem;
+    background-color: lightgray;
+    border: 4px solid $sunshine;
+    overflow: hidden;
+  }
+
+  &__img-web-icon img {
+    display: block;
+    width: 90%;
+    transform: scale(1);
+    transition: all 450ms ease-in-out;
+  }
+  
+  &__img-web-icon p {
+    text-align: center;
+    font-size: $base-size;
+    margin-bottom: 0.5rem;
+    transform: scale(1);
+    transition: all 600ms ease-in-out;
+  }
+
+  &__img-web-icon:hover img, &__img-web-icon:hover p {
+    transform: scale(1.1);
+    transition: all 600ms ease-in-out;
+  }
+
+  &__skill-level {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    
+    &-bar {
+      width: 80%;
+      border: 1px solid black;
+    }
+
+    &-bar-fill {
+      height: 10px;
+      background-color: $sunshine;
+    }
+
+    span {
+      font-size: $base-size;
     }
   }
 }
