@@ -369,12 +369,30 @@
 
     &-bar-fill {
       height: 10px;
+      transform: scaleX(0);
+      transform-origin: left center;
       background-color: $sunshine;
-    }
-
+    }    
+    
     span {
       font-size: $base-size;
     }
   }
 }
 
+@keyframes fillSkillBar{
+  0%{
+    transform: scaleX(0);
+  }
+
+  100%{
+    transform: scaleX(1);
+  }
+}
+
+.bar-reveal {
+  animation-name: fillSkillBar;
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.13,.69,0,.99);
+}

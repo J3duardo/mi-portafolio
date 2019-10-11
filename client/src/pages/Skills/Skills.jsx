@@ -164,7 +164,11 @@ const Skills = (props) => {
                 <p>ReactJS</p>
                 <div className="skills__skill-level">
                   <div className="skills__skill-level-bar">
-                    <div style={{width: "90%"}} className="skills__skill-level-bar-fill"></div>
+                    <div 
+                      style={{width: "90%"}}
+                      className={`skills__skill-level-bar-fill ${activeContent === "4" && "bar-reveal"}`}
+                    >
+                    </div>
                   </div>
                   <span>90%</span>
                 </div>
@@ -174,7 +178,11 @@ const Skills = (props) => {
                 <p>NodeJs</p>
                 <div className="skills__skill-level">
                   <div className="skills__skill-level-bar">
-                    <div style={{width: "80%"}} className="skills__skill-level-bar-fill"></div>
+                    <div 
+                      style={{width: "80%"}} 
+                      className={`skills__skill-level-bar-fill ${activeContent === "4" && "bar-reveal"}`}
+                    >
+                    </div>
                   </div>
                   <span>80%</span>
                 </div>
@@ -184,7 +192,11 @@ const Skills = (props) => {
                 <p>MogoDB</p>
                 <div className="skills__skill-level">
                   <div className="skills__skill-level-bar">
-                    <div style={{width: "75%"}} className="skills__skill-level-bar-fill"></div>
+                    <div 
+                      style={{width: "75%"}}
+                      className={`skills__skill-level-bar-fill ${activeContent === "4" && "bar-reveal"}`}
+                    >
+                    </div>
                   </div>
                   <span>75%</span>
                 </div>
@@ -194,7 +206,11 @@ const Skills = (props) => {
                 <p>CSS3</p>
                 <div className="skills__skill-level">
                   <div className="skills__skill-level-bar">
-                    <div style={{width: "95%"}} className="skills__skill-level-bar-fill"></div>
+                    <div 
+                      style={{width: "95%"}}
+                      className={`skills__skill-level-bar-fill ${activeContent === "4" && "bar-reveal"}`}
+                    >
+                    </div>
                   </div>
                   <span>95%</span>
                 </div>
@@ -204,7 +220,11 @@ const Skills = (props) => {
                 <p>Sass</p>
                 <div className="skills__skill-level">
                   <div className="skills__skill-level-bar">
-                    <div style={{width: "90%"}} className="skills__skill-level-bar-fill"></div>
+                    <div 
+                      style={{width: "90%"}}
+                      className={`skills__skill-level-bar-fill ${activeContent === "4" && "bar-reveal"}`}
+                    >
+                    </div>
                   </div>
                   <span>90%</span>
                 </div>
@@ -214,7 +234,11 @@ const Skills = (props) => {
                 <p>JavaScript</p>
                 <div className="skills__skill-level">
                   <div className="skills__skill-level-bar">
-                    <div style={{width: "80%"}} className="skills__skill-level-bar-fill"></div>
+                    <div 
+                      style={{width: "80%"}} 
+                      className={`skills__skill-level-bar-fill ${activeContent === "4" && "bar-reveal"}`}
+                    >
+                    </div>
                   </div>
                   <span>80%</span>
                 </div>
