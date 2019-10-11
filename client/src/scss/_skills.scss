@@ -364,6 +364,7 @@
     
     &-bar {
       width: 80%;
+      margin-right: 5px;
       border: 1px solid black;
     }
 
@@ -372,6 +373,10 @@
       transform: scaleX(0);
       transform-origin: left center;
       background-color: $sunshine;
+
+      @media screen and(max-width: 550px) {
+        transform: scaleX(1);
+      }
     }    
     
     span {
