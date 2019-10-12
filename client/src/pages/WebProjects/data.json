@@ -30,5 +30,13 @@
     "tech": ["/img/dev-icons/react.png", "/img/dev-icons/nodejs.png", "/img/dev-icons/mongodb.png", "/img/dev-icons/javascript.png"],
     "projectUrl": "https://natours-traveling.herokuapp.com/",
     "githubUrl": "https://github.com/J3duardo/natours-backend"
+  },
+  {
+    "logo": "/img/slack-clone.png",
+    "title": "Slack Clone",
+    "description": "Aplicación de mensajería instantánea tipo Slack desarrollada con React, Redux y Firebase. Componentes creados con la librería Semantic UI React. Opción para crear canales públicos y privados, agregar canales a favoritos, personalizar los colores de la interfaz, entre otras.",
+    "tech": ["/img/dev-icons/react.png", "/img/dev-icons/firebase.png", "/img/dev-icons/javascript.png", "/img/dev-icons/css3.png"],
+    "projectUrl": "https://react-slack-chat-518b1.firebaseapp.com/",
+    "githubUrl": "https://github.com/J3duardo/react-slack-chat"
   }
 ]
