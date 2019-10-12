@@ -13,6 +13,7 @@ import {Provider} from "react-redux";
 import {createStore, compose, applyMiddleware} from "redux";
 import reducers from "./redux/reducers";
 import thunk from "redux-thunk";
+import WebProjects from './pages/WebProjects/WebProjects';
 const middlewares = [thunk];
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -25,6 +26,7 @@ function App() {
         <Hero />
         <About />
         <Skills />
+        <WebProjects />
         <Projects />
         <Gallery />
         <Contact />

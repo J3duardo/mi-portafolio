@@ -1,0 +1,34 @@
+[
+  {
+    "logo": "/img/natours.png",
+    "title": "Natours",
+    "description": "Tienda online (ficticia) de venta de paquetes turísticos con funcionalidad para registro de usuarios, autenticación con jwt, sistema de reserva de paquetes, geolocalización con Mapbox y sistema de pagos mediante Stripe Payments.",
+    "tech": ["/img/dev-icons/nodejs.png", "/img/dev-icons/mongodb.png", "/img/dev-icons/pug.png", "/img/dev-icons/javascript.png"],
+    "projectUrl": "https://natours-traveling.herokuapp.com/",
+    "githubUrl": "https://github.com/J3duardo/natours-backend"
+  },
+  {
+    "logo": "/img/weather-app.jpg",
+    "title": "Clearsky App",
+    "description": "Aplicación web para obtener el estado actual del tiempo y el pronóstico en la ubicación proporcionada por el usuario. La ubicación se calcula mediante geolocalización inversa con la API de Mapbox GL y la data del tiempo se obtiene mediante la API de Darksky.",
+    "tech": ["/img/dev-icons/nodejs.png", "/img/dev-icons/mapbox.png", "/img/dev-icons/handlebars.png", "/img/dev-icons/javascript.png"],
+    "projectUrl": "https://clearsky-app.herokuapp.com/",
+    "githubUrl": "https://github.com/J3duardo/weather-api"
+  },
+  {
+    "logo": "/img/crown-logo.png",
+    "title": "Crown Clothing",
+    "description": "Tienda electrónica ficticia de ropa para damas y caballeros. Frontend desarrollado en React y Redux, emplea autenticación mediante Firebase y base de datos en Firestore. Backend desarrollado en NodeJS y ExpressJS. Funcionalidad de pago mediante Stripe Payments.",
+    "tech": ["/img/dev-icons/react.png", "/img/dev-icons/nodejs.png", "/img/dev-icons/firebase.png", "/img/dev-icons/javascript.png"],
+    "projectUrl": "https://crown-clothing-store.herokuapp.com/",
+    "githubUrl": "https://github.com/J3duardo/e-clothing-backend"
+  },
+  {
+    "logo": "/img/dev-connector.png",
+    "title": "DevConnector",
+    "description": "Red social con temática de desarrollo web con autenticación de usuarios y creación de perfiles con opción para mostrar los repositorios Github del usuario. Desarrollada con React, NodeJS y ExpressJS y base de datos administrada mediante MongoDB.",
+    "tech": ["/img/dev-icons/react.png", "/img/dev-icons/nodejs.png", "/img/dev-icons/mongodb.png", "/img/dev-icons/javascript.png"],
+    "projectUrl": "https://natours-traveling.herokuapp.com/",
+    "githubUrl": "https://github.com/J3duardo/natours-backend"
+  }
+]
