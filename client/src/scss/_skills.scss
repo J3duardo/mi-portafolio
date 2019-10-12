@@ -293,7 +293,6 @@
       animation-name: despues;
       animation-duration: 6000ms;
       animation-iteration-count: infinite;
-      animation-iteration-count: linear;
     }
   }
 
@@ -320,6 +319,7 @@
     }
   }
 
+  //Contenido de la pestaña Desarrollo Web
   &__img-web-icons-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -356,6 +356,7 @@
     transition: all 600ms ease-in-out;
   }
 
+  //Barras de experiencia
   &__skill-level {
     display: flex;
     justify-content: space-between;
@@ -385,6 +386,7 @@
   }
 }
 
+//Animar el relleno de las barras de experiencia
 @keyframes fillSkillBar{
   0%{
     transform: scaleX(0);
