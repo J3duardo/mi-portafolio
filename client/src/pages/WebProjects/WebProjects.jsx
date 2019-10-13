@@ -29,8 +29,9 @@ const WebProjects = (props) => {
           autoPlayInterval={4000}
           autoPlayDirection="ltr"
           autoPlay={true}
-          duration={600}
+          duration={900}
           mouseDragEnabled={true}
+          stopAutoPlayOnHover={false}
           buttonsDisabled={true}
           dotsDisabled={false}
           playButtonEnabled
