@@ -28,8 +28,8 @@
     "title": "DevConnector",
     "description": "Red social con temática de desarrollo web con autenticación de usuarios y creación de perfiles con opción para mostrar los repositorios Github del usuario. Desarrollada con React, NodeJS y ExpressJS y base de datos administrada mediante MongoDB.",
     "tech": ["/img/dev-icons/react.png", "/img/dev-icons/nodejs.png", "/img/dev-icons/mongodb.png", "/img/dev-icons/javascript.png"],
-    "projectUrl": "https://natours-traveling.herokuapp.com/",
-    "githubUrl": "https://github.com/J3duardo/natours-backend"
+    "projectUrl": "https://jegq-dev-connector.herokuapp.com/",
+    "githubUrl": "https://github.com/J3duardo/dev-connector/"
   },
   {
     "logo": "/img/slack-clone.png",
