@@ -1,0 +1,137 @@
+/*Contenedor del loader*/
+.loader-wrapper {
+  width:100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8;
+}
+
+.loader-wrapper h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #52658f;
+}
+
+/*Estilos del loader*/
+/*----- Obtenido de https://github.danielcardoso.net/load-awesome/animations/ball-scale-multiple.html -----*/
+.la-ball-scale-multiple,
+.la-ball-scale-multiple > div {
+    position: relative;
+    box-sizing: border-box;
+}
+.la-ball-scale-multiple {
+    display: block;
+    font-size: 0;
+    color: #fff;
+}
+.la-ball-scale-multiple.la-dark {
+    color: #333;
+}
+.la-ball-scale-multiple > div {
+    display: inline-block;
+    float: none;
+    background-color: currentColor;
+    border: 0 solid currentColor;
+}
+.la-ball-scale-multiple {
+    width: 32px;
+    height: 32px;
+}
+.la-ball-scale-multiple > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    opacity: 0;
+    animation: ball-scale-multiple 1s 0s linear infinite;
+}
+.la-ball-scale-multiple > div:nth-child(2) {
+  animation-delay: .2s;
+}
+.la-ball-scale-multiple > div:nth-child(3) {
+  animation-delay: .4s;
+}
+.la-ball-scale-multiple.la-sm {
+    width: 16px;
+    height: 16px;
+}
+.la-ball-scale-multiple.la-sm > div {
+    width: 16px;
+    height: 16px;
+}
+.la-ball-scale-multiple.la-2x {
+    width: 64px;
+    height: 64px;
+}
+.la-ball-scale-multiple.la-2x > div {
+    width: 64px;
+    height: 64px;
+}
+.la-ball-scale-multiple.la-3x {
+    width: 96px;
+    height: 96px;
+}
+.la-ball-scale-multiple.la-3x > div {
+    width: 96px;
+    height: 96px;
+}
+/*
+ * Animation
+ */
+@-webkit-keyframes ball-scale-multiple {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    5% {
+        opacity: .75;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+}
+@-moz-keyframes ball-scale-multiple {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    5% {
+        opacity: .75;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+}
+@-o-keyframes ball-scale-multiple {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    5% {
+        opacity: .75;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+}
+@keyframes ball-scale-multiple {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    5% {
+        opacity: .75;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+}

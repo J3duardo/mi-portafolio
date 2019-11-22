@@ -13,20 +13,31 @@
     <meta name="og:description" content="Portafolio personal de Jesús Guzmán" />
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="%PUBLIC_URL%/initial-loader.css">
     <title>Jesús Guzmán &mdash; Portafolio</title>
   </head>
-  <body>
+  <body style="margin: 0">
     <div id="fb-root"></div>
-  <script>
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-  </script>
+    <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v4.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loader-wrapper">
+        <div style="color: #52658f" class="la-ball-scale-multiple la-3x">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h1>Cargando...</h1>
+      </div>
+    </div>
+    <script src="./initial-loader.js"></script>
   </body>
 </html>
