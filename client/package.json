@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && gzipper --verbose ./build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^4.1.2"
+    "concurrently": "^4.1.2",
+    "gzipper": "^3.4.1"
   }
 }
