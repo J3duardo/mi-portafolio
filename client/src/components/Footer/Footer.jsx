@@ -31,7 +31,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="footer__item">
-              <a href="https://www.behance.net/JEduardo_/" className="footer__link" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.behance.net/J3duardo" className="footer__link" target="_blank" rel="noopener noreferrer">
                 <img src={behanceLogo} alt="behance logo" className="footer__icon" />
               </a>
             </li>
