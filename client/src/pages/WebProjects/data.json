@@ -1,5 +1,13 @@
 [
   {
+    "logo": "/img/post-it.png",
+    "title": "Post It!",
+    "description": "Single web application para blogposting con notificaciones y actualizaciones en tiempo real. Los usuarios autenticados reciben notificaciones cuando otros usuarios agregan posts, pueden crear y editar sus posts, comentar sus posts y los de terceros, modificar los datos de su perfil (nombre, avatar, contraseña) y eliminar su cuenta, eliminándose automáticamente todos sus posts y sus comentarios en posts de terceros.",
+    "tech": ["/img/dev-icons/react.png", "/img/dev-icons/firebase.png", "/img/dev-icons/javascript.png", "/img/dev-icons/css3.png"],
+    "projectUrl": "https://think-piece-ad813.firebaseapp.com/",
+    "githubUrl": "https://github.com/J3duardo/hot-takes"
+  },
+  {
     "logo": "/img/natours.png",
     "title": "Natours",
     "description": "Tienda online (ficticia) de venta de paquetes turísticos con funcionalidad para registro de usuarios, autenticación con jwt, sistema de reserva de paquetes, geolocalización con Mapbox y sistema de pagos mediante Stripe Payments.",
