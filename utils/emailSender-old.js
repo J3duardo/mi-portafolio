@@ -1,25 +1,28 @@
 const nodemailer = require("nodemailer");
-const sgTransport = require("nodemailer-sendgrid-transport");
 const pug = require("pug");
 
 const sendMail = async (formData) => {
-  const transporter = nodemailer.createTransport(sgTransport({
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
     auth: {
-      api_key: process.env.SENDGRID_API_KEY
+      user: process.env.EMAIL_USERNAME,
+      pass: process.env.EMAIL_PASSWORD
     }
-  }));
+  });
 
   //Renderizar el HTML del email desde un template pug
-  const html = pug.renderFile(__dirname + `/../views/email/mensaje.pug`, {
+  const html = pug.renderFile(`${__dirname}/../views/email/mensaje.pug`, {
     nombre: formData.nombre,
     email: formData.email,
     mensaje: formData.mensaje
   });
 
   const mailOptions = {
-    from: `Mi Portafolio | ${formData.email}`,
+    from: process.env.EMAIL_USERNAME,
     to: process.env.EMAIL_TO,
-    subject: "Mensaje de Mi Portafolio",
+    subject: "Mensaje del portafolio",
     html: html
   }
 

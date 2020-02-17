@@ -1,6 +1,15 @@
 extends baseEmail
 block content
-  h2(style="text-align: center") Nuevo Mensaje del Portafolio
-  p Remitente #{nombre}
-  p Email: #{email}
-  p Mensaje: #{mensaje}
+  h2(style="text-align: center") Nuevo Mensaje de Mi Portafolio Personal
+  p
+    span(style="font-weight: bold") Remitente:
+    | 
+    span #{nombre}
+  p
+    span(style="font-weight: bold") Email:
+    | 
+    span #{email}
+  p
+    span(style="font-weight: bold") Mensaje:
+    | 
+    span #{mensaje}
