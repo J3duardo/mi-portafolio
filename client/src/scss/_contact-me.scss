@@ -128,14 +128,6 @@
       outline: 1px solid $fresh;
       outline-offset: 3px;
     }
-    
-    &:invalid{
-      border-bottom: 3px solid $rojizo;
-    }
-
-    &:valid{
-      border-bottom: 3px solid rgb(2, 255, 2);
-    }
 
     @media screen and(max-width: 450px){
       width: 48%;
@@ -157,14 +149,6 @@
     &:focus{
       outline: 1px solid $fresh;
       outline-offset: 3px;
-    }
-
-    &:invalid{
-      border-bottom: 3px solid $rojizo;
-    }
-
-    &:valid{
-      border-bottom: 3px solid rgb(2, 255, 2);
     }
   }
 

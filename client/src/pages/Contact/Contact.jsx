@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {connect} from "react-redux";
 import locationIcon from "../../icons/location.svg";
 import letterIcon from "../../icons/letter.svg";
@@ -15,6 +15,17 @@ const Contact = (props) => {
     mensaje: ""
   });
 
+  useEffect(() => {
+    // Limpiar el formulario si el mensaje se envía correctamente
+    if(props.success) {
+      setFormData({
+        nombre: "",
+        email: "",
+        mensaje: ""
+      })
+    }
+  }, [props.success])
+
   const onChangeHandler = (e) => {
     setFormData({
       ...formData,
@@ -22,14 +33,11 @@ const Contact = (props) => {
     })
   }
 
+  // Enviar el mensaje
   const onSubmitHandler = (e) => {
     e.preventDefault();
+
     props.sendMail(formData);
-    setFormData({
-      nombre: "",
-      email: "",
-      mensaje: ""
-    })
   }
 
   //Hacer scroll a la sección Contact
@@ -76,7 +84,6 @@ const Contact = (props) => {
                 className="form__name"
                 placeholder="Nombre"
                 name="nombre"
-                required
                 value={formData.nombre}
                 onChange={onChangeHandler}
               />
@@ -85,7 +92,6 @@ const Contact = (props) => {
                 className="form__email"
                 placeholder="Email"
                 name="email"
-                required
                 value={formData.email}
                 onChange={onChangeHandler}
               />
@@ -97,7 +103,6 @@ const Contact = (props) => {
               cols="30" 
               rows="10" 
               placeholder="Mensaje"
-              required
               value={formData.mensaje}
               onChange={onChangeHandler}
             >
@@ -123,6 +128,7 @@ const mapDispatchToProps = (dispatch) => {
 
 const mapStateToProps = (state) => {
   return {
+    success: state.mailReducer.success,
     selectedSection: state.selectedSection.selectedSection
   }
 }

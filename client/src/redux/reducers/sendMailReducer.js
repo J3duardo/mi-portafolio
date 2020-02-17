@@ -24,7 +24,8 @@ export default (state = initialState, action) => {
     case SEND_MAIL_ERROR:
       return {
         ...state,
-        error: action.payload,
+        errorMessage: action.payload.errorMessage,
+        error: {...action.payload.error},
         sending: false,
         failed: true
       }

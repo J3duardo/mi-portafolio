@@ -33,9 +33,15 @@ export const sendMailAsync = (data) => {
       });
       dispatch({type: SEND_MAIL_SUCCESS})   
     } catch (error) {
+      if(error.response) {
+        return dispatch({
+          type: SEND_MAIL_ERROR,
+          payload: {errorMessage: error.response.data.message, error: {...error.response}}
+        })
+      }
       dispatch({
         type: SEND_MAIL_ERROR,
-        payload: error
+        payload: error.message
       })
     }
   }
