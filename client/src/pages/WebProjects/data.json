@@ -1,5 +1,13 @@
 [
   {
+    "logo": "/img/thenextblog.jpg",
+    "title": "The Next Blog",
+    "description": "Plataforma de blogging fullstack (SSR). Frontend desarrollado en NextJS, Bootstrap y Disqus. Backend desarrollado en NodeJS, Express, MongoDB y Mongoose. Maneja dos tipos de usuarios: regulares y administradores. Los usuarios regulares tienen la posiblidad de crear blogs así como de editar y eliminar sus propios blogs. Los usuarios con privilegios de administradores tienen la capacidad para editar y eliminar tanto sus blogs como los de terceros, entre otras funcionalidades adicionales.",
+    "tech": ["/img/dev-icons/nextjs.jpg", "/img/dev-icons/bootstrap.png", "/img/dev-icons/nodejs.png", "/img/dev-icons/mongodb.png"],
+    "projectUrl": "https://thenextblog.now.sh/",
+    "githubUrl": "https://github.com/J3duardo/next-blog"
+  },
+  {
     "logo": "/img/post-it.png",
     "title": "Post It!",
     "description": "Single web application para blogposting con notificaciones y actualizaciones en tiempo real. Los usuarios autenticados reciben notificaciones cuando otros usuarios agregan posts, pueden crear y editar sus posts, comentar sus posts y los de terceros, modificar los datos de su perfil (nombre, avatar, contraseña) y eliminar su cuenta, eliminándose automáticamente todos sus posts y sus comentarios en posts de terceros.",
