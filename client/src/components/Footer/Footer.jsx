@@ -14,7 +14,7 @@ const Footer = () => {
         <div
           className="fb-share-button"
           data-href="https://jegq-portafolio.herokuapp.com/"
-          data-layout="button_count"
+          data-layout="button"
           data-size="large"
         >
         </div>
