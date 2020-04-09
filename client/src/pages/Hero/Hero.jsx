@@ -16,8 +16,9 @@ const Hero = (props) => {
       <MainNav />
       <div className="hero-text">
         <h1 className="hero-text__title main-title-reveal">Jesús Guzmán</h1>
-        <h2 className="hero-text__subtitle hero-text__subtitle--1 secondary-title-reveal">Freelance Photographer</h2>
-        <h2 className="hero-text__subtitle hero-text__subtitle--2 secondary-title-reveal">Frontend Developer</h2>
+        <h2 className="hero-text__subtitle hero-text__subtitle--1 secondary-title-reveal">Desarrollador Full Stack</h2>
+        <h2 className="hero-text__subtitle hero-text__subtitle--1 secondary-title-reveal">Fotógrafo</h2>
+        <h2 className="hero-text__subtitle hero-text__subtitle--3 secondary-title-reveal">Editor Audiovisual</h2>
       </div>
 
       <div className="picture-container">
