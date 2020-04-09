@@ -16,8 +16,8 @@ const About = (props) => {
       <h2 className="about__title">Acerca de mí</h2>
       <div className="about__content">
         <div className="about__text-container">
-          <p className="about__text">Ingeniero, con una curiosidad innata por la naturaleza, la ciencia y los números. Entre mis pasiones están la fotografía, el postprocesado, el VFX, el motion graphics y el mundo audiovisual en general. Durante mis años como estudiante de ingeniería, aunque a manera de hobby, me desarrollé como fotógrafo aficionado utilizando una simple compacta de 8 megapíxels, y con el pasar el tiempo la fotografía se convirtió prácticamente en mi segunda profesión.</p>
-          <p className="about__text">Al estar siempre en la búsqueda de nuevos retos y conocimientos, además de la fotografía y demás disciplinas mencionadas, recientemente comencé a interesarme por el amplio mundo del desarrollo web, en el cual planeo seguir desarrollándome a tiempo completo, en especial en las tecnologías frontend.</p>
+          <p className="about__text">Ingeniero, con una curiosidad innata por la naturaleza, la ciencia y los números. Entre mis pasiones están la fotografía, el postprocesado, el VFX, el motion graphics y el mundo audiovisual en general. Durante mis años como estudiante de ingeniería, aunque a manera de hobby, me desarrollé como fotógrafo aficionado utilizando una simple compacta de 8 megapíxels, y con el pasar el tiempo mi pasión por la fotografía creción hasta convertirse prácticamente en mi segunda profesión.</p>
+          <p className="about__text">Además de la fotografía y el mundo audiovisual, desarrollé un creciente interés por el amplio mundo de las teconologías web, dedicándome de lleno durante varios años al aprendizaje de las distintas tecnologías web, tanto frontend como backend, hasta convertirme actualmente en desarrollador freelance a tiempo completo.</p>
         </div>
         <picture className="about__img-container">
           <source srcSet="/img/about-me-cuadrada.jpg" media="(max-width: 650px)" className="about__img"/>
